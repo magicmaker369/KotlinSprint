@@ -2,6 +2,6 @@ package org.example
 
 fun main() {
 
-    //println(11 % 2)
+    println(10 % 2 == 0)
 
 }
