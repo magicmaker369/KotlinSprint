@@ -31,5 +31,4 @@ fun main() {
     println(salaryAllPermanentEmployees)
     println(totalSalaryExpenses)
     println(averageSalaryEmployees)
-
 }
