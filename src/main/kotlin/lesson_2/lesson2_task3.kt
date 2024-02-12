@@ -12,6 +12,8 @@ package org.example.lesson_2
  – Выведи результат в консоль.
  */
 
+const val qtyMinutePerHour = 60
+
 fun main() {
 
     val departureHour = 9
@@ -19,20 +21,16 @@ fun main() {
     val routeTimeMinute = 457
 
     //переводим в минуты время отправления поезда
-    val departureTimeInMinute = (departureHour * 60) + departureMinute
-//    println("Время отправления в минутах: $departureTimeInMinute")
+    val departureTimeInMinute = (departureHour * qtyMinutePerHour) + departureMinute
 
     //получаем общее количество минут
     val allTimeInRoute = departureTimeInMinute + routeTimeMinute
-//    println("Общее время в минутах: $allTimeInRoute")
 
     //получаем количество часов
-    val convertAllMinuteInHour = allTimeInRoute / 60
-//    println("Количество часов: $convertAllMinuteInHour")
+    val convertAllMinuteInHour = allTimeInRoute / qtyMinutePerHour
 
     //получаем количество минут
-    val convertAllMinuteInMinute = allTimeInRoute % 60
-//    println("Количество минут: $convertAllMinuteInMinute")
+    val convertAllMinuteInMinute = allTimeInRoute % qtyMinutePerHour
 
     println("Время прибытия поезда: $convertAllMinuteInHour:$convertAllMinuteInMinute")
 }
