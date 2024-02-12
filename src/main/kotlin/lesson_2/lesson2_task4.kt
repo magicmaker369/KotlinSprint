@@ -14,16 +14,16 @@ package org.example.lesson_2
 Если получается нецелое число, то дробная часть должна отбрасываться.
  */
 
-const val crystalOre = 7
-const val ironOre = 11
-const val boosterValue = 0.2
+const val CRYSTAL_ORE = 7
+const val IRON_ORE = 11
+const val BOOSTER_VALUE = 20.0 / 100
 
 fun main() {
 
-    val qtyCrystalOreAddedBooster = (crystalOre * boosterValue).toInt()
+    val qtyCrystalOreAddedBooster = (CRYSTAL_ORE * BOOSTER_VALUE).toInt()
     println("Количество бонусных материалов с применение баффа: $qtyCrystalOreAddedBooster")
 
-    val qtyIronOreAddedBooster= (ironOre * boosterValue).toInt()
+    val qtyIronOreAddedBooster= (IRON_ORE * BOOSTER_VALUE).toInt()
     println("Количество бонусных материалов с применение баффа: $qtyIronOreAddedBooster")
 
 }
