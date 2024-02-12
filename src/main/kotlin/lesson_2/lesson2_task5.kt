@@ -21,14 +21,14 @@ import kotlin.math.pow
     n — количество периодов: а также месяцев, кварталов, лет и т.д.
  */
 
-const val qtyDeposit = 70_000
-const val interestRate = 0.167
-const val years = 20
+const val QTY_DEPOSIT = 70_000
+const val INTEREST_RATE = (16.7 / 100)
+const val YEARS = 20
 
 fun main() {
 
-    val valueDegree = ((1 + interestRate).pow(years))
-    val compoundInterestFormula = (qtyDeposit * valueDegree)
+    val valueDegree = ((1 + INTEREST_RATE).pow(YEARS))
+    val compoundInterestFormula = (QTY_DEPOSIT * valueDegree)
 
 //    вот так почему-то не обрезает значения до 3х символов!?
 //    println("Размер вклада через 20 лет составит: ${compoundInterestFormula.toString().format("%.3f")}")
