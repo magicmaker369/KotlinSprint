@@ -22,10 +22,8 @@ const val ALL_TABLE = 13
 
 fun main() {
 
-    val qtyBookedTableToday = ALL_TABLE
+    val qtyBookedTableToday = 13
     val qtyBookedTableTomorrow = 9
 
-    println("Доступность столиков на сегодня: ${qtyBookedTableToday != ALL_TABLE}")
-    println("Доступность столиков на завтра: ${qtyBookedTableTomorrow != ALL_TABLE}")
-
+    println("Доступность столиков на сегодня: ${qtyBookedTableToday < ALL_TABLE}, \nДоступность столиков на завтра: ${qtyBookedTableTomorrow < ALL_TABLE}")
 }
