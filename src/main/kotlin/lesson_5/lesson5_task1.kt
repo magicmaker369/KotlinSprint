@@ -13,8 +13,8 @@ package org.example.lesson_5
 В противном случае вывести сообщение "Доступ запрещен."
  */
 
-const val FIRST_DIGIT = 6
-const val SECOND_DIGIT = 7
+const val FIRST_DIGIT = 3
+const val SECOND_DIGIT = 9
 
 fun main() {
 
