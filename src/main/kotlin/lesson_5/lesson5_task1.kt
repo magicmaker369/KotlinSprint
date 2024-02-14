@@ -13,15 +13,19 @@ package org.example.lesson_5
 В противном случае вывести сообщение "Доступ запрещен."
  */
 
-const val SUCCESS_RESULT = 14
+const val FIRST_DIGIT = 6
+const val SECOND_DIGIT = 7
 
 fun main() {
 
-    println("Привет! Чтобы авторизоваться на платформе, введи результат произведения 6+7 в консоль: ")
+    val successResult = FIRST_DIGIT + SECOND_DIGIT
+
+    println("Привет! Чтобы авторизоваться на платформе, " +
+            "введи результат выражения $FIRST_DIGIT+$SECOND_DIGIT в консоль: ")
 
     val enterResult = readlnOrNull()?.toInt()
 
-    val captchaTestResult = if (enterResult == SUCCESS_RESULT) "Добро пожаловать!"
+    val captchaTestResult = if (enterResult == successResult) "Добро пожаловать!"
     else "Доступ запрещен."
 
     println(captchaTestResult)
