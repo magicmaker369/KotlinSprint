@@ -26,6 +26,8 @@ fun main() {
     fromWhere = "D2"
     toWhere = "D3"
     strokeNumber = 2
+//    решение с помомощью постфиксного инкримента
+//    strokeNumber ++
 
     println("Игра продолжается: [$fromWhere-$toWhere;$strokeNumber]")
 
