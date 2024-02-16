@@ -43,7 +43,7 @@ fun main() {
     val weatherNowSunny = true
     val tentNowOpen = true
     val airHumidityNow = 20.0
-    val seasonNowWinter = false
+    val seasonNowWinter = true
 
     val positiveCondition = (weatherNowSunny == IS_SUNNY) &&
             (tentNowOpen == IS_TENT_OPEN) &&
