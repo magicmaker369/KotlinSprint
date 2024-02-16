@@ -29,26 +29,26 @@ package org.example.lesson_4
 /**
  * Благоприятные условия для роста бобовых
  */
-const val WEATHER_SUNNY = true
-const val TENT_OPEN = true
-const val AIR_HUMIDITY = (20.0 / 100)
-const val SEASON_SPRING = "весна"
-const val SEASON_SUMMER = "лето"
-const val SEASON_AUTUMN = "осень"
+const val IS_SUNNY = true
+const val IS_TENT_OPEN = true
+const val AIR_HUMIDITY = 20.0
+const val IS_SEASON_WINTER = false
+const val CONVERT_PERCENT = 100
 
 fun main() {
 
     /**
      * Ниже вводим текущее состояние условий
      */
-    val weatherTodaySunny = true
-    val tentOpen = true
-    val airHumidity = (20.0 / 100)
-    val season = "зима"
+    val weatherNowSunny = true
+    val tentNowOpen = true
+    val airHumidityNow = 20.0
+    val seasonNowWinter = false
 
-    val positiveCondition = (weatherTodaySunny == WEATHER_SUNNY) &&
-            (tentOpen == TENT_OPEN) && (airHumidity == AIR_HUMIDITY) &&
-            (season == SEASON_SPRING || season == SEASON_SUMMER || season == SEASON_AUTUMN)
+    val positiveCondition = (weatherNowSunny == IS_SUNNY) &&
+            (tentNowOpen == IS_TENT_OPEN) &&
+            ((airHumidityNow / CONVERT_PERCENT) == (AIR_HUMIDITY / CONVERT_PERCENT)) &&
+            (seasonNowWinter == IS_SEASON_WINTER)
 
     println("Благоприятные ли условия сейчас для роста бобовых? $positiveCondition")
 
