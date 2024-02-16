@@ -22,6 +22,20 @@ const val MAX_VOLUME = 100
 
 fun main() {
 
+    // вариант решение по комментарию https://github.com/magicmaker369/KotlinSprint/pull/16#pullrequestreview-1878222268
+    var weight = 20
+    var volume = 80
+
+    println("Груз с весом $weight кг и объемом $volume л соответствует категории 'Average': " +
+            "${(weight >= MIN_WEIGH) && (weight <= MAX_WEIGH) && (volume < MAX_VOLUME)}")
+
+    weight = 50
+    volume = 100
+
+    println("Груз с весом $weight кг и объемом $volume л соответствует категории 'Average': " +
+            "${(weight >= MIN_WEIGH) && (weight <= MAX_WEIGH) && (volume < MAX_VOLUME)}")
+
+    /* изначальный вариант решения
     var weight = 20
     var volume = 80
     var average = (weight >= MIN_WEIGH) && (weight <= MAX_WEIGH) && (volume < MAX_VOLUME)
@@ -33,5 +47,5 @@ fun main() {
     average = (weight >= MIN_WEIGH) && (weight <= MAX_WEIGH) && (volume < MAX_VOLUME)
 
     println("Груз с весом $weight кг и объемом $volume л соответствует категории 'Average': $average")
-
+    */
 }
