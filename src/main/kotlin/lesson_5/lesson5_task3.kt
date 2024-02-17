@@ -30,22 +30,27 @@ fun main() {
     println("Введите второе число от $minDigit до $maxDigit  в консоль, чтобы проверить свой выйгрыш: ")
     val enterSecondDigit = readlnOrNull()?.toIntOrNull()
 
-    val resultLottery = if (enterFirstDigit == firstSuccessDigit &&
+    if (enterFirstDigit == firstSuccessDigit &&
         enterSecondDigit == secondSuccessDigit ||
         enterSecondDigit == firstSuccessDigit &&
-        enterFirstDigit == secondSuccessDigit) "Поздравляем! Вы выиграли главный приз!"
+        enterFirstDigit == secondSuccessDigit)
+        println("""
+            Поздравляем! Вы выиграли главный приз!
+        """.trimIndent())
     else if (enterFirstDigit == firstSuccessDigit ||
         enterSecondDigit == secondSuccessDigit ||
         enterFirstDigit == secondSuccessDigit ||
-        enterSecondDigit == firstSuccessDigit) """
+        enterSecondDigit == firstSuccessDigit)
+        println("""
         Вы выиграли утешительный приз!
         В этот раз выигрышными числами были $firstSuccessDigit и $secondSuccessDigit
-        """.trimIndent()
-    else """
+        """.trimIndent())
+    else println("""
         Неудача!
         В этот раз выигрышными числами были $firstSuccessDigit и $secondSuccessDigit
-    """.trimIndent()
+    """.trimIndent())
 
-    println(resultLottery)
+    // вариант, если создать отдельную переменную для if (+ можно будет отказаться от println() в каждом блоке)
+//    println(resultLottery)
 
 }
