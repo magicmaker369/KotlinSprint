@@ -20,17 +20,17 @@ fun main() {
         Придумайте и введите логин: 
     """.trimIndent()
     )
-    val createLogin = readlnOrNull()
+    val createLogin = readln()
 
     println("Придумайте и введите пароль:")
-    val createPassword = readlnOrNull()
+    val createPassword = readln()
 
     do {
         println("Введите свой логин")
-        val enterLogin = readlnOrNull()
+        val enterLogin = readln()
 
         println("Введите свой пароль")
-        val enterPassword = readlnOrNull()
+        val enterPassword = readln()
     } while (createLogin != enterLogin && createPassword != enterPassword)
     println("Авторизация прошла успешно")
 
