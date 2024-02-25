@@ -25,9 +25,9 @@ fun main() {
                 "введи в консоль год своего рождения числами в формате ХХХХ"
     )
 
-    val userYearsOfBirth = readlnOrNull()?.toInt()
+    val userYearsOfBirth = readln().toInt()
     val currentYear = LocalDate.now().year
-    val userAge = (currentYear - userYearsOfBirth!!)
+    val userAge = (currentYear - userYearsOfBirth)
 
     val resultText = if (userAge >= AGE_OF_MAJORITY) "Показать экран со скрытым контентом"
     else "Вернуться на главный экран"
