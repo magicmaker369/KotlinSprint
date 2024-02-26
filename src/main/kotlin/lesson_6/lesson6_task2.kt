@@ -11,6 +11,17 @@ package org.example.lesson_6
 fun main() {
 
     println("Введите количество секунд:")
+    val enterValue = readln().toLong()
+    val convertSecondToMillisec = enterValue * 1000
+
+    Thread.sleep(convertSecondToMillisec)
+
+    println("Прошло $enterValue секунд")
+
+
+    /*
+    решение с выводом количества секунд каждую секунду
+    println("Введите количество секунд:")
     var enterValue = readln().toLong()
     val saveEnterValue = enterValue
 
@@ -19,5 +30,6 @@ fun main() {
         Thread.sleep(1000)
     }
     println("Прошло $saveEnterValue секунд")
+     */
 
 }
