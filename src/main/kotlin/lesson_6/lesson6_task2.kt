@@ -24,7 +24,7 @@ fun main() {
     println("\"Дополнительное решение с выводом количества секунд каждую секунду\"")
     println("Введите количество секунд:")
     var enterValue2 = readln().toLong()
-    val saveEnterValue = enterValue
+    val saveEnterValue = enterValue2
 
     while (enterValue2 >= 0) {
         println("${enterValue2--}")
