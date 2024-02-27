@@ -10,6 +10,7 @@ package org.example.lesson_6
 
 fun main() {
 
+    println("\"Основное решение задания\"")
     println("Введите количество секунд:")
     val enterValue = readln().toLong()
     val convertSecondToMillisec = enterValue * 1000
@@ -18,18 +19,17 @@ fun main() {
 
     println("Прошло $enterValue секунд")
 
+    println()
 
-    /*
-    решение с выводом количества секунд каждую секунду
+    println("\"Дополнительное решение с выводом количества секунд каждую секунду\"")
     println("Введите количество секунд:")
-    var enterValue = readln().toLong()
+    var enterValue2 = readln().toLong()
     val saveEnterValue = enterValue
 
-    while (enterValue >= 0) {
-        println("${enterValue--}")
+    while (enterValue2 >= 0) {
+        println("${enterValue2--}")
         Thread.sleep(1000)
     }
     println("Прошло $saveEnterValue секунд")
-     */
 
 }
