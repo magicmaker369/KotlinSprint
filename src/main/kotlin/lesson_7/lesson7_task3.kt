@@ -14,9 +14,7 @@ fun main() {
     println("Введите число: ")
     val enterDigit = readln().toInt()
 
-    val resultEnterDigit = enterDigit
-
-    for (i in 0..resultEnterDigit step 2)
+    for (i in 0..enterDigit step 2)
         println(i)
 
 }
