@@ -15,8 +15,7 @@ import kotlin.random.Random
 
 fun main() {
 
-    val random = Random
-    val randomNumber = random.nextInt(1, 9)
+    val randomNumber = Random.nextInt(1, 9)
     var numberOfAttempts = 5
 
     while (numberOfAttempts > 0) {
@@ -25,13 +24,10 @@ fun main() {
 
         if (randomNumber == enterDigit) {
             println("Это была великолепная игра!")
-            return
-        } else if (randomNumber != enterDigit) {
+            break
+        } else
             println("Неверно, осталось попыток: ${--numberOfAttempts}")
-        }
-        if (numberOfAttempts == 0) {
-            println("Было загадано число $randomNumber")
-        }
     }
+    println("Было загадано число $randomNumber")
 
 }
