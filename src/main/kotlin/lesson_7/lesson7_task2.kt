@@ -15,13 +15,17 @@ package org.example.lesson_7
 
 fun main() {
 
-    do {
-        val randomRange = (1000..9999).random()
-        println("Ваш код авторизации: $randomRange")
+    val randomRange = (1000..9999)
 
-        println("Введите Ваш код для авторизации ниже")
-        val enterDigit = readln().toInt()
-    } while (enterDigit != randomRange)
+    do {
+        val generateCode = randomRange.random()
+        println("Ваш код авторизации: $generateCode")
+
+        println()
+
+        println("Введите Ваш код для авторизации ниже:")
+        val enterDigit = readln().toIntOrNull()
+    } while (enterDigit != generateCode)
 
     println("Добро пожаловать в личный кабинет!")
 
