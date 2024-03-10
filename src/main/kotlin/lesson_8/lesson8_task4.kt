@@ -23,23 +23,24 @@ fun main() {
     for (i in arrayIngredients)
         println(i)
 
+    var enterText = ""
 
-    println("Какой ингредиент Вы хотите заменить?")
-    val enterText = readln()
+    do {
+        println("Какой ингредиент Вы хотите заменить?")
+        enterText = readln()
+        if (enterText !in arrayIngredients)
+            println("Такого ингрединта нет в списке, попробуйте ещё раз.")
+        else println("Отлично, Вы хотите заменить $enterText.")
+    } while (enterText !in arrayIngredients)
 
     val checkIndexIngredient = arrayIngredients.indexOf(enterText)
-
-//    val checkIngredients = arrayIngredients.contains(enterText)
-//    println("Такого ингрединта нет в списке, попробуйте ещё раз")
 
     println("Какой ингредиент Вы хотите добавить?")
     val enterChangeIngredient = readln()
 
-    println("Принято. Вы хотите изменить $enterText на $enterChangeIngredient")
+    arrayIngredients[checkIndexIngredient] = enterChangeIngredient
 
-    arrayIngredients[checkIndexIngredient] = "$enterChangeIngredient"
-
-    println("Обновленный список с ингредиентами выглядит так:")
+    println("Готово! Вы сохранили следующий список:")
     for (i in arrayIngredients)
         println(i)
 
