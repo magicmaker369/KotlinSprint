@@ -26,9 +26,7 @@ fun main() {
     println("Введите ингредиент по которому хотите найти информацию: ")
     val enterText = readln()
 
-    val checkIngredient = ingredientsForPasta.contains(enterText)
-
-    if (checkIngredient)
+    if (enterText in ingredientsForPasta)
         println("Ингредиент $enterText в рецепте есть")
     else
         println("Такого ингредиента в рецепте нет")
