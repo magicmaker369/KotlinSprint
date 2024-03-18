@@ -16,8 +16,10 @@ fun main() {
 
     println("В рецепте есть следующие ингрединенты:")
 
-    for (i in ingredientsForPasta) {
+    for (i in ingredientsForPasta)
         println(i)
-    }
+
+    //  вариант с использование forEach
+    //    ingredientsForPasta.forEach { println(it) }
 
 }
