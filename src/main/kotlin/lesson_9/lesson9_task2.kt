@@ -16,6 +16,8 @@ package org.example.lesson_9
 "Теперь в рецепте есть следующие ингредиенты: [список_ингредиентов]".
  */
 
+const val ANSWER_YES = "да"
+
 fun main() {
 
     val baseIngredietns = mutableListOf("pasta", "salmon", "cream")
@@ -25,18 +27,17 @@ fun main() {
     println("Желаете добавить еще?")
     val enterText = readln()
 
-    for (i in enterText) {
-        if (enterText != "да") {
-            println("Принято, ничего не добавляем.")
-            return
-        }
+    if (enterText.contains(ANSWER_YES, ignoreCase = true)) {
+        println("Какой ингредиент вы хотите добавить?")
+    } else {
+        println("Принято, ничего не добавляем.")
+        return
     }
-
-    println("Какой ингредиент вы хотите добавить?")
 
     val enterNewIngredient = readln()
 
     baseIngredietns.add(enterNewIngredient)
 
     println("Теперь в рецепте есть следующие ингредиенты: $baseIngredietns")
+
 }
