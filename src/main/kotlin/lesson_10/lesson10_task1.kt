@@ -18,10 +18,10 @@ import kotlin.random.Random
 fun main() {
 
     val humanRoll = rollDice()
-    printResultHumanRoll(humanRoll)
+    println("Человек бросил игральную кость с результатом: $humanRoll")
 
     val robotRoll = rollDice()
-    printResultRobotRoll(robotRoll)
+    println("Компьютeр бросил игральную кость с результатом: $robotRoll")
 
     if (humanRoll > robotRoll) {
         println("Победило человечество!")
@@ -32,15 +32,4 @@ fun main() {
 
 }
 
-fun rollDice(): Int {
-    val randomNumber = Random.nextInt(1, 6)
-    return randomNumber
-}
-
-fun printResultHumanRoll(humanRoll: Int) {
-    println("Человек бросил игральную кость с результатом: $humanRoll")
-}
-
-fun printResultRobotRoll(robotRoll: Int) {
-    println("Компьютeр бросил игральную кость с результатом: $robotRoll")
-}
+fun rollDice(): Int = Random.nextInt(1, 6)
