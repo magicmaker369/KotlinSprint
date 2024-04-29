@@ -16,33 +16,30 @@ fun main() {
 
     println("Для регистрации в приложении создайте Логин и Пароль")
 
-    val login = enterLogin()
-
-    val password = enterPassword()
-
-    checkLengthData(login, password)
-
-}
-
-fun enterLogin() : String? {
     println("Введите Логин:")
-    return readln()
-}
+    val login = fillField()
 
-fun enterPassword() : String? {
     println("Введите Пароль:")
+    val password = fillField()
+
+    val resultCheckForLogin = checkLengthField(login)
+    val resultCheckForPassword = checkLengthField(password)
+
+    if (!resultCheckForLogin || !resultCheckForPassword)
+        println("Логин или пароль недостаточно длинные. Попробуйте ввести более 3х символов.")
+    else println("Вы успешно зарегистрировались!")
+
+}
+
+fun fillField() : String? {
     return readln()
 }
 
-fun checkLengthData(login: String?, password: String?) {
-    val loginLenght = "${login?.length}"
-    val passwordlengt = "${password?.length}"
+fun checkLengthField(nameField: String?): Boolean {
 
-    println(loginLenght)
-    println(passwordlengt)
+    val findLength = "${nameField?.length}"
+    val minLength = 4
 
-    if (loginLenght < 4.toString() || passwordlengt < 4.toString())
-        println("Логин или пароль недостаточно длинные. Попробуйте ввести более 4х символов.")
-    else println("Вы успешно зарегистрировались!")
+    return findLength >= minLength.toString()
 
 }
