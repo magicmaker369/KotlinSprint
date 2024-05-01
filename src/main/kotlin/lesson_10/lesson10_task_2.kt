@@ -31,15 +31,15 @@ fun main() {
 
 }
 
-fun fillField() : String? {
+fun fillField() : String {
     return readln()
 }
 
-fun checkLengthField(nameField: String?): Boolean {
+fun checkLengthField(nameField: String): Boolean {
 
-    val findLength = "${nameField?.length}"
+    val findLength: Int = nameField.length
     val minLength = 4
 
-    return findLength >= minLength.toString()
+    return findLength >= minLength
 
 }
