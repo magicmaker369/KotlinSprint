@@ -13,6 +13,4 @@ class User(
     val id: Int,
     val password: String,
     val email: String,
-) {
-
-}
+)
