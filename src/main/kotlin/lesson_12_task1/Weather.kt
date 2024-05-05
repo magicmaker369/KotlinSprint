@@ -39,7 +39,6 @@ class Weather {
         )
         println("---")
     }
-
 }
 
 fun main() {
