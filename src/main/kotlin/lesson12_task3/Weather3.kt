@@ -36,7 +36,6 @@ class Weather3(_dayTemp: Int, _nightTemp: Int, _isRainy: Boolean) {
         """.trimIndent()
         )
     }
-
 }
 
 fun main() {
