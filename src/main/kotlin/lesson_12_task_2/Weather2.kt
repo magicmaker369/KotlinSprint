@@ -30,7 +30,6 @@ class Weather2(
         """.trimIndent()
         )
     }
-
 }
 
 fun main() {
@@ -39,5 +38,4 @@ fun main() {
 
     println("Прогноз погоды в Дубае на сутки:")
     weatherInDubai.printWeatherStatus()
-
 }
