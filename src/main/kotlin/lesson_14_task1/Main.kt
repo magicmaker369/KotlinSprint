@@ -14,6 +14,67 @@ package org.example.lesson_14_task1
 - создай по 1 экземпляру каждого типа корабля.
  */
 
+open class Liner(
+    val name: String,
+    val speed: Int,
+    val passengerCapacity: Int,
+) {
+
+    open fun printInfoShip() {
+        println(
+            """
+            Тип корабля $name имеет следующие характеристики:
+            Скорость: $speed
+            Вместимость пассажиров: $passengerCapacity
+        """.trimIndent()
+        )
+        println("---")
+    }
+}
+
+class Cargo(
+    name: String,
+    speed: Int,
+    passengerCapacity: Int,
+    private val loadCapacity: Int,
+) : Liner(name, speed, passengerCapacity) {
+
+    override fun printInfoShip() {
+        println(
+            """
+            Тип корабля $name имеет следующие характеристики:
+            Скорость: $speed
+            Вместимость пассажиров: $passengerCapacity
+            Грузоподъемность: $loadCapacity
+        """.trimIndent()
+        )
+        println("---")
+    }
+}
+
+class Icebreaker(
+    name: String,
+    speed: Int,
+    passengerCapacity: Int,
+    private var isSplittingIce: Boolean,
+) : Liner(name, speed, passengerCapacity) {
+
+    override fun printInfoShip() {
+        println(
+            """
+            Тип корабля $name имеет следующие характеристики:
+            Скорость: $speed
+            Вместимость пассажиров: $passengerCapacity
+            ${
+                if (isSplittingIce) "Умеет колоть лёд: Да"
+                else "Умеет колоть лёд: Нет"
+            }
+        """.trimIndent()
+        )
+        println("---")
+    }
+}
+
 fun main() {
 
     val linerShip = Liner("Лайнер", 100, 1300)
@@ -22,6 +83,6 @@ fun main() {
     val cargoShip = Cargo("Грузовой", 80, 0, 50000)
     cargoShip.printInfoShip()
 
-    val icebrakerShip = Icebraker("Ледокол", 50, 300, true)
-    icebrakerShip.printInfoShip()
+    val icebreakerShip = Icebreaker("Ледокол", 50, 300, true)
+    icebreakerShip.printInfoShip()
 }
