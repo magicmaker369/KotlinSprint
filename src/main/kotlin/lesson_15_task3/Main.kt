@@ -19,7 +19,7 @@ abstract class TypeUser(val name: String) {
     abstract fun sendMessage()
 }
 
-class Users() : TypeUser(name = "User") {
+class User() : TypeUser(name = "User") {
     override fun readMessage() {
         println("$name читатет сообщение.")
     }
@@ -29,7 +29,7 @@ class Users() : TypeUser(name = "User") {
     }
 }
 
-class Administrators() : TypeUser(name = "Administrator") {
+class Administrator() : TypeUser(name = "Administrator") {
     override fun readMessage() {
         println("$name читатет сообщение.")
     }
@@ -49,11 +49,11 @@ class Administrators() : TypeUser(name = "Administrator") {
 
 fun main() {
 
-    val userFirst = Users()
+    val userFirst = User()
     userFirst.readMessage()
     userFirst.sendMessage()
 
-    val administratorFirst = Administrators()
+    val administratorFirst = Administrator()
     administratorFirst.readMessage()
     administratorFirst.sendMessage()
     administratorFirst.deleteUsers()
