@@ -11,14 +11,14 @@ package org.example.lesson_15_task1
 - выведи сообщения в консоль, о том как они могут передвигаться.
  */
 
-class Crucian(val name: String = "Карась") : SwimmingAnimal{
+class Crucian(val name: String = "Карась") : Swimming{
 
     override fun swimming() {
         println("$name умеет плавать под водой.")
     }
 }
 
-class Duck(val name: String = "Утка") : FlyingAndSwimmingAnimal {
+class Duck(val name: String = "Утка") : Flying, Swimming {
 
     override fun swimming() {
         println("$name умеет плавать на поверхности воды.")
@@ -29,7 +29,7 @@ class Duck(val name: String = "Утка") : FlyingAndSwimmingAnimal {
     }
 }
 
-class Seagull(val name: String = "Чайка") : FlyingAndSwimmingAnimal {
+class Seagull(val name: String = "Чайка") : Flying, Swimming {
 
     override fun swimming() {
         println("$name умеет плавать на поверхности воды.")
@@ -40,14 +40,13 @@ class Seagull(val name: String = "Чайка") : FlyingAndSwimmingAnimal {
     }
 }
 
-interface SwimmingAnimal {
+interface Swimming {
 
     fun swimming()
 }
 
-interface FlyingAndSwimmingAnimal {
+interface Flying {
 
-    fun swimming()
     fun flying()
 }
 
