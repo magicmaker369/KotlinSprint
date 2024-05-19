@@ -1,6 +1,7 @@
 package org.example.lesson_16_task1
 
 import kotlin.random.Random
+import kotlin.random.nextInt
 
 /*
 Задача 1 к Уроку 16
@@ -13,7 +14,7 @@ import kotlin.random.Random
 
 class Dice() {
 
-    private val randomDigit = Random.nextInt(1, 6)
+    private val randomDigit = Random.nextInt(1..6)
 
     fun rollDice() {
         println("Выпало число: $randomDigit")
